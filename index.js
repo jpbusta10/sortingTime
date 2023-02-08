@@ -3,7 +3,7 @@ function quicksort(array) {
     return array;
   }
 
-  var pivot = array[0];
+  var pivot = array[Math.floor(Math.random()*array.length)];
 
   var left = [];
   var right = [];
@@ -34,7 +34,7 @@ function bblSort(arr) {
   return arr;
 
 }
-let n = 21;///maximun n
+let n = 10;///maximun n
 console.log('reverse sorted array quickSort\n');
 for (let i = 1; i < n; i++) {
 
@@ -42,7 +42,7 @@ for (let i = 1; i < n; i++) {
   quicksort(arr);
   arr.reverse();
   //console.log(arr);
-  console.log('n=' + i);
+  //console.log('n=' + i);
   console.time();
   quicksort(arr)
   console.timeEnd();
@@ -53,7 +53,7 @@ for (let i = 1; i < n; i++) {
   var arr = Array.from({ length: i }, () => Math.floor(Math.random() * 40));
   quicksort(arr);
   
-  console.log('n=' + i);
+  //console.log('n=' + i);
   console.time();
   quicksort(arr)
   console.timeEnd();
@@ -62,7 +62,7 @@ console.log('random array quicksort')
 for (let i = 1; i < n; i++) {
 
   var arr = Array.from({ length: i }, () => Math.floor(Math.random() * 40));
-  console.log('n=' + i);
+ // console.log('n=' + i);
   console.time();
   quicksort(arr)
   console.timeEnd();
@@ -73,7 +73,7 @@ console.log('reverse sort bubleSort\n');
 for (let i = 1; i < n; i++) {
 
   var arr = Array.from({ length: i }, () => Math.floor(Math.random() * 40));
-  console.log('n=' + i);
+  //console.log('n=' + i);
   bblSort(arr);
   arr.reverse();
   console.time();
@@ -84,7 +84,7 @@ console.log('sorted array\n');
 for (let i = 1; i < n; i++) {
 
   var arr = Array.from({ length: i }, () => Math.floor(Math.random() * 40));
-  console.log('n=' + i);
+  //console.log('n=' + i);
   bblSort(arr);
   console.time();
   bblSort(arr);
@@ -95,7 +95,7 @@ console.log('random array:\n');
 for (let i = 1; i < n; i++) {
 
   var arr = Array.from({ length: i }, () => Math.floor(Math.random() * 40));
-  console.log('n=' + i);
+ // console.log('n=' + i);
   console.time();
   bblSort(arr);
   //console.log(bblSort(arr));
